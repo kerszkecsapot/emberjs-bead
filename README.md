@@ -3,6 +3,17 @@
 - Bacsa Roland
 - AE8YTH
 
+## Feladat
+- Egy webes vastagkliens, azaz egyoldalas alkalmazás készítése Ember.js segítségével. Tartalmaznia kell minimálisan:
+ - legalább két modellt, egy-sok kapcsolatban
+ - legalább 1 űrlapot
+ - legalább 1 listázó oldalt
+ - legyen lehetőség új felvételére
+ - legyen lehetőség meglévő szerkesztésére
+ - legyen lehetőség meglévő törlésére
+ - REST API végpont kialakítása
+ - szerveroldali perzisztálás fájlba
+
 ## Használatieset-modell
 ![hasznalatiesetdiag](readme/hasznalatiesetdiag.jpg)
 
