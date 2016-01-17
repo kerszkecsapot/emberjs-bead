@@ -1,8 +1,10 @@
 # Alkalmazások fejlesztése
-- 3. beadandó feladat - Bacsa Roland - AE8YTH
+- 3. beadandó feladat
+- Bacsa Roland
+- AE8YTH
 
 ## Használatieset-modell
-![hasznalatieset](readme/hasznalatieset.jpg)
+![hasznalatiesetdiag](readme/hasznalatiesetdiag.jpg)
 
 ### Használatieset szöveges leírása
 - Főoldal: a felhasználó a weboldalt megnyitva ezen az oldalon találja magát.
