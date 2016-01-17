@@ -2,6 +2,7 @@
 - 3. beadandó feladat
 - Bacsa Roland
 - AE8YTH
+- Rest Api projekt: [https://github.com/kerszkecsapot/restapi-bead2](restapi-bead2)
 
 ## Feladat
 - Egy webes vastagkliens, azaz egyoldalas alkalmazás készítése Ember.js segítségével. Tartalmaznia kell minimálisan:
