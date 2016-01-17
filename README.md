@@ -1,53 +1,70 @@
-# Bead
+# Alkalmazások fejlesztése
+- 3. beadandó feladat - Bacsa Roland - AE8YTH
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+## Használatieset-modell
+![hasznalatieset](readme/hasznalatieset.jpg)
 
-## Prerequisites
+### Használatieset szöveges leírása
+- Főoldal: a felhasználó a weboldalt megnyitva ezen az oldalon találja magát.
+ - Tartalmazza az előadók listáját.
+ - A "Műveletek" oszlop alatti gombok segítségével lehetősége van a felhasználónak szerkeszteni ill. törölni az egyes előadókat.
+ - Az előadó nevére kattintva az előadó adatait tartalmazó "Előadó" oldalra kerülünk.
+- Előadó:
+ - Tartalmazza az előadóhoz tartalmazó zeneszámok listáját.
+ - A "Műveletek" oszlop alatti gombok segítségével lehetősége van a felhasználónak szerkeszteni ill. törölni az egyes zeneszámokat.
+ - A zeneszám címére kattintva a zeneszám dalszövegét tartalmazó "Zene" oldalra kerülünk.
+- Zene:
+ - Tartalmazza az előadóhoz tartalmazó zeneszám adatait: előadó, cím, dalszöveg.
+- Új előadó:
+ - Lehetőségünk van új előadó felvételére.
+- Új zeneszám:
+ - Lehetőségünk van új zeneszám felvételére.
+- 404: ha nem létező oldalt nyitunk meg ez a lap tájékoztat minket erről a hibánkról.
+ - ![404](readme/404.jpg)
 
-You will need the following things properly installed on your computer.
+## Tervezés
+### Adatbázis terv
+![adatbazis](readme/adatbazis.jpg)
 
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM)
-* [Bower](http://bower.io/)
-* [Ember CLI](http://www.ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
+### Oldal felépítése
+![felepites](readme/felepites.jpg)
 
-## Installation
+## Fejlesztés
+### Fejlesztőeszközök
+- c9.io
+- EmberJS
 
-* `git clone <repository-url>` this repository
-* change into the new directory
-* `npm install`
-* `bower install`
+### Fejlesztői utasítások
+- Repository klónozása:
+ - Rest API: `git clone https://github.com/kerszkecsapot/restapi-bead2`
+ - EmberJS: `git clone https://github.com/kerszkecsapot/emberjs-bead`
+- `npm install`
+- `bower install`
 
-## Running / Development
+### Helperek
+- help.js:
+```
+import Ember from 'ember';
 
-* `ember server`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+export default Ember.Helper.helper(function(params) {
+    var str = params[0];
+    return new Ember.Handlebars.SafeString(str.replace(/(<)|(>)/g, '').replace(/(\n)/g, '<br />'));
+});
+```
+  - A dalszövegek megjelenítéséhez szükséges.
+  - Szükséges a HTML tagek értelmezése.
+  - "\n" sorvégek HTML tagé alakítása.
+  - A biztonság érdekében a "<" és ">" karaktereket törli
 
-### Code Generators
+### Futtatás
+- Rest Api elindítása szükséges!
+- `ember server`
 
-Make use of the many generators for code, try `ember help generate` for more details
+### Tesztelés
+- Automatikusan generált tesztfájlok: 'test/'
+- `ember test`
+- `ember test --server`
 
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://www.ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
+### Kód generálás
+- `ember build`
+- vagy `ember build --environment production`
