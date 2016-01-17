@@ -1,0 +1,31 @@
+<table>
+    <thead>
+    <tr>
+        <th>Előadó</th>
+        <th>Cím</th>
+        <th>Műveletek</th>
+    </tr>   
+    </thead>
+    <tbody>
+    {{#if eloado.zeneszamok}}
+        {{#each eloado.zeneszamok as |z|}}
+        <tr>
+            <td>{{eloado.nev}}</td>
+            <td>{{#link-to "zene" z}}{{z.cim}}{{/link-to}}</td>
+            <td>
+                {{link-to "Szerkeszt" "szerkeszt-zeneszam" z class="btn-muvelet"}}
+                <button class="btn-muvelet" {{action "torolZeneszam" z}}>Töröl</button>
+            </td>
+        </tr>
+        {{/each}}
+    {{else}}
+        <tr><td colspan="3">Jelenleg még nincs zeneszám feltöltve <b>{{eloado.nev}}</b> előadóhoz.</td></tr>
+    {{/if}}
+        
+    </tbody>
+</table>
+
+<p>
+<br>
+{{link-to "Vissza" "index" class="btn"}} {{link-to "Új zeneszám" "uj-z" class="btn"}}
+</p>

@@ -1,0 +1,29 @@
+<table>
+    <thead>
+    <tr>
+        <th>Név</th>
+        <th>Műveletek</th>
+    </tr>   
+    </thead>
+    <tbody>
+    {{#if eloadok}}
+        {{#each eloadok as |e|}}
+        <tr>
+            <td>{{#link-to "eloado" e}}{{e.nev}}{{/link-to}}</td>
+            <td>
+                {{link-to "Szerkeszt" "szerkeszt-eloado" e class="btn-muvelet"}}
+                <button class="btn-muvelet" {{action "torolEloado" e}}>Töröl</button>
+            </td>
+        </tr>
+        {{/each}}
+    {{else}}
+        <tr><td colspan="2">Jelenleg még nincs előadó az adatbázisban.</td></tr>
+    {{/if}}
+        
+    </tbody>
+</table>
+
+<p>
+<br>
+{{link-to "Új előadó" "uj-e" class="btn"}}
+</p>

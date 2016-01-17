@@ -1,0 +1,12 @@
+<form method="post">
+    <fieldset>
+        <div class="bemenet {{if hibak.nev "vanhiba"}}">
+            <label for="nev">Név</label><br>
+            <input id="nev" name="nev" placeholder=" - előadó neve -" type="text" value="{{data.nev}}">
+            <p class="hibaleiras">{{hibak.nev}}</p>
+        </div>
+            
+        <button type="reset">Törlés</button>
+        <button {{action "submit"}}>Küldés</button>
+    </fieldset>
+</form>

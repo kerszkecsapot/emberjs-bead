@@ -1,0 +1,32 @@
+<form method="post">
+    <fieldset>
+        <div class="bemenet {{if hibak.cim "vanhiba"}}">
+            <label for="cim">Cím</label><br>
+            <input id="cim" name="cim" placeholder=" - zeneszám címe -" type="text" value="{{data.cim}}">
+            <p class="hibaleiras">{{hibak.cim}}</p>
+        </div>
+        
+        <div class="bemenet">
+            <label for="eloado">Előadó</label><br>
+            {{#if data}}
+                <input type="hidden" id="eloado" name="eloado" value="{{data.eloado.id}}">
+                <input type="text" value="{{data.eloado.nev}}" disabled>
+            {{else}}
+                <select id="eloado">
+                {{#each eloadok as |e|}}
+                    <option value={{e.id}}>{{e.nev}}</option>
+                {{/each}}
+                </select>
+            {{/if}}
+        </div>
+        
+        <div class="bemenet {{if hibak.cim "vanhiba"}}">
+            <label for="dalszoveg">Dalszöveg</label><br>
+            <textarea id="dalszoveg" name="dalszoveg" cols="45" rows="15" placeholder="- zeneszám dalszövege -">{{data.dalszoveg}}</textarea> 
+            <p class="hibaleiras">{{hibak.dalszoveg}}</p>
+        </div>
+            
+        <button type="reset">Törlés</button>
+        <button {{action "submit"}}>Küldés</button>
+    </fieldset>
+</form>

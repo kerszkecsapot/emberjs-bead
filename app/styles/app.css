@@ -1,0 +1,342 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url('pic/background.jpg') fixed center top no-repeat;
+    background-color: #000000;
+}
+
+div.main {
+    margin: auto;
+    width: 900px;
+    background-color: rgba(255,255,255,0.2);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 0 25px rgba(0,0,0,1);
+    color: #000000;
+    font-family: Verdana, sans-serif;
+}
+
+div.menu {
+    margin: auto;
+    margin-bottom: 25px;
+    width: 880px;
+    background: url('pic/menubg.jpg');
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 0.9em;
+    font-family: Verdana, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+div.menu ul {
+    list-style-type: none;
+}
+
+div.menu ul li {
+    display: inline;
+}
+
+div.menu ul li a {
+    display: inline-block;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 8px;
+    padding-right: 8px;
+    height: 40px;
+    line-height: 38px;
+    font-weight: normal;
+    text-shadow: 0px -1px 2px rgba(0,0,0,1);
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+div.menu ul li a:hover {
+    background-color: #0089cd;
+    background-image: url('pic/menuabg.jpg');
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.active { /* ember-js beállítja */
+    display: inline-block;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 8px;
+    padding-right: 8px;
+    height: 40px;
+    line-height: 38px;
+    font-weight: normal;
+    color: #000000;
+    text-decoration: none;
+    background-image: url('pic/menuabg.jpg');
+}
+
+div.tartalomcim {
+    margin: auto;
+    margin-bottom: 2px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 860px;
+    background-color: rgba(0,0,0,0.7);
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    font-family: Verdana, sans-serif;
+    font-size: 1em;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+div.tartalom {
+    display: table;
+    margin: auto;
+    margin-bottom: 25px;
+    width: 860px;
+    padding: 15px 10px;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0.7);
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    font-family: Verdana, sans-serif;
+    font-size: 1em;
+}
+
+div.lablec {
+    margin: auto;
+    margin-bottom: 15px;
+    padding: 10px 0;
+    width: 900px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-family: Verdana, sans-serif;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 0.7em;
+    background-color: rgba(0,0,0,0.75);
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+p.center {
+    text-align: center;
+}
+
+p.right {
+    text-align: right;
+}
+
+p.justify {
+    text-align: justify;
+}
+
+p.kicsi {
+    font-size: 0.8em;
+}
+
+a, a:visited {
+    color: #000000;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+}
+
+li {
+    padding: 0 0 3px 0;
+}
+
+h1 {
+    text-align: left;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+h2 {
+    text-align: left;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    text-align: left;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+
+/* ----- TABLAZAT ----- */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+table tr td {
+    text-align: center;
+    font-family: Verdana, sans-serif;
+    padding: 5px 10px;
+    font-size: 0.9em;
+}
+
+table tr:nth-child(even) td {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+table tr:hover td {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+table tr th {
+    text-align: center;
+    font-family: Verdana, sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 1px solid black;
+}
+
+
+/* ----- INPUT ----- */
+
+div.bemenet {
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+.vanhiba {
+    border: 1px solid red;
+}
+
+p.hibaleiras {
+    font-size: 0.8em;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+input {
+    width: 90%;
+    height: 25px;
+    padding: 3px 4px;
+    border: 1px solid #0e2b39;
+    border-radius: 4px;
+    background-color: #dddddd;
+    font-size: 0.9em;
+    font-family: Verdana, sans-serif;
+}
+
+input:hover {
+    border: 1px solid #206d80;
+}
+
+fieldset {
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 500px;
+    padding: 20px;
+    border: none;
+}
+
+button {
+    height: 40px;
+    cursor: pointer;
+    padding: 6px 10px 6px 10px;
+    border: 0;
+    border-radius: 4px;
+    background-color: #0e2b39;
+    color: #FFFFFF;
+    font-size: 0.9em;
+    font-family: Verdana, sans-serif;
+    font-weight: normal;
+    text-shadow: 0px -1px 2px rgba(0,0,0,1);
+    text-decoration: none;
+}
+
+.btn, .btn:visited {
+    cursor: pointer;
+    padding: 12px 10px 12px 10px;
+    border: 0;
+    border-radius: 4px;
+    background-color: #0e2b39;
+    color: #FFFFFF;
+    font-size: 0.9em;
+    font-family: Verdana, sans-serif;
+    font-weight: normal;
+    text-shadow: 0px -1px 2px rgba(0,0,0,1);
+    text-decoration: none;
+}
+
+.btn:hover {
+    text-decoration: none;
+    background-color: #0089cd;
+}
+
+.btn-muvelet, .btn-muvelet:visited {
+    height: 30px;
+    cursor: pointer;
+    padding: 6px 10px 6px 10px;
+    border: 0;
+    border-radius: 4px;
+    background-color: #0e2b39;
+    color: #FFFFFF;
+    font-size: 0.9em;
+    font-family: Verdana, sans-serif;
+    font-weight: normal;
+    text-shadow: 0px -1px 2px rgba(0,0,0,1);
+    text-decoration: none;
+}
+
+.btn-muvelet:hover {
+    text-decoration: none;
+    background-color: #0089cd;
+}
+
+select {
+    height: 25px;
+    padding: 1px 4px;
+    border: 1px solid #0e2b39;
+    border-radius: 4px;
+    background-color: #dddddd;
+    font-size: 0.9em;
+    font-family: Verdana, sans-serif;
+}
+
+select:hover {
+    border: 1px solid #206d80;
+}
+
+textarea {
+    padding: 3px 4px;
+    border: 1px solid #0e2b39;
+    border-radius: 4px;
+    background-color: #dddddd;
+    font-size: 0.9em;
+    font-family: Verdana, sans-serif;
+}
+
+textarea:hover {
+    border: 1px solid #206d80;
+}
